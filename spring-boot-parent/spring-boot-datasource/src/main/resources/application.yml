@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    hikari:
+      pool-name: com.zaxxer.hikari
+      jdbc-url: jdbc:mysql://114.67.94.135/apiunion_config?characterEncoding=utf8&useSSL=true&autoReconnect=true
+      username: root
+      password: wKDPCTqJZS^r7zHX
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 3600000
+      maximum-pool-size: 100
+      minimum-idle: 5
+      connection-test-query: select 1 from dual
+    username: root
+    password: wKDPCTqJZS^r7zHX
+    url: jdbc:mysql://114.67.94.135/apiunion_config?characterEncoding=utf8&useSSL=true&autoReconnect=true
+    jdbc-url: jdbc:mysql://114.67.94.135/apiunion_config?characterEncoding=utf8&useSSL=true&autoReconnect=true
+mybatis:
+  exclude-annotation-class: com.tangcz.springboot.mybatis.annotation.ShardOnConfigDB

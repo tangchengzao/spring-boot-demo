@@ -12,15 +12,15 @@ public class GetController {
 
     private Map<String, Object> params = new HashMap<>();
 
-    @RequestMapping(path = "/{city_id}/{user_id}", method = RequestMethod.GET)
-    public Object findUser(@PathVariable("city_id") String cityId, @PathVariable("user_id") String userId) {
-        params.clear();
-
-        params.put("cityId", cityId);
-        params.put("userId", userId);
-
-        return params;
-    }
+//    @RequestMapping(path = "/{city_id}/{user_id}", method = RequestMethod.GET)
+//    public Object findUser(@PathVariable("city_id") String cityId, @PathVariable("user_id") String userId) {
+//        params.clear();
+//
+//        params.put("cityId", cityId);
+//        params.put("userId", userId);
+//
+//        return params;
+//    }
 
     @GetMapping(value = "/v1/page_user1")
     public Object pageUser(int from, int size) {

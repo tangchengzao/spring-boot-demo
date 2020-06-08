@@ -1,0 +1,21 @@
+spring:
+  devtools:
+    restart:
+      trigger-file: .reloadtrigger
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/spring?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 123456
+    type: com.tangcz.springbootdemo.demo7.mybatis.datasource.DynamicDataSource
+mybatis:
+  mapper-scanner-configurer:
+    basePackage: com.tangcz.springbootdemo
+    excludeAnnotationClass: com.tangcz.springbootdemo.demo7.mybatis.annotation.ShardOnConfigDB
+    annotationClass: org.mybatis.spring.annotation.MapperScan
+    sqlSessionFactoryBeanName: sqlSessionFactory
+dynamic-data-source:
+  targetDataSources:
+    configDataSource: APIUNION-CONFIG
+mapper-proxy:
+  excludeAnnotationClass: com.tangcz.springbootdemo.demo7.mybatis.annotation.ShardOnConfigDB
